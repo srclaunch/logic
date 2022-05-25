@@ -2,11 +2,7 @@ import { Project } from '@srclaunch/types';
 
 import { DEFAULT_SRCLAUNCH_CONFIG } from '../../../constants/config/srclaunch';
 
-export const generateSrcLaunchProjectConfig = async ({
-  project,
-}: {
-  project?: Project;
-}) => {
+export const generateSrcLaunchProjectConfig = async (project: Project) => {
   const config = {
     ...DEFAULT_SRCLAUNCH_CONFIG,
     ...project,
