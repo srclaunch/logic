@@ -10,6 +10,8 @@ export const getValidationProblemLabel = (
   readonly short: string;
   readonly long: string;
 } => {
+  console.log('context', context);
+  console.log('condition', condition);
   switch (condition) {
     case Condition.Contains:
       return {
