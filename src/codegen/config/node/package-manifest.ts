@@ -1,6 +1,24 @@
 import { Dependencies, PackageOptions, PackageType } from '@srclaunch/types';
 
-export type NodePackageManifestGeneratorOptions = {
+export async function generateNodePackageManifest({
+  author,
+  dependencies,
+  description,
+  devDependencies,
+  engines,
+  exports,
+  files,
+  license,
+  main,
+  module,
+  name,
+  peerDependencies,
+  publishConfig,
+  scripts,
+  type,
+  types,
+  version,
+}: {
   author?: string;
   description?: string;
   dependencies?: Dependencies;
@@ -22,27 +40,7 @@ export type NodePackageManifestGeneratorOptions = {
   type?: PackageType;
   types?: string;
   version?: string;
-};
-
-export async function generateNodePackageManifest({
-  author,
-  dependencies,
-  description,
-  devDependencies,
-  engines,
-  exports,
-  files,
-  license,
-  main,
-  module,
-  name,
-  peerDependencies,
-  publishConfig,
-  scripts,
-  type,
-  types,
-  version,
-}: NodePackageManifestGeneratorOptions): Promise<string> {
+}): Promise<string> {
   if (!name) {
     throw new Error('Name is required');
   }

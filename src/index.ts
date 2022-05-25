@@ -3,6 +3,7 @@ export * from './analyzers';
 export * from './conditions';
 export { createESModule } from './codegen/code/js/es-module';
 export { generateGitIgnoreConfig } from './codegen/config/git/gitignore';
+export { generateNodePackageManifest } from './codegen/config/node/package-manifest';
 export { generateYarnConfig } from './codegen/config/package-managers/yarn';
 export { readFile } from './readers/file/index';
 export { readJSONFile } from './readers/file/json';
