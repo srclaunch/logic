@@ -976,7 +976,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@srclaunch/cli@npm:^0.1.621":
+"@srclaunch/cli@npm:0.1.621":
   version: 0.1.621
   resolution: "@srclaunch/cli@npm:0.1.621"
   dependencies:
@@ -1027,14 +1027,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@srclaunch/dx@npm:^0.1.84":
-  version: 0.1.84
-  resolution: "@srclaunch/dx@npm:0.1.84"
-  checksum: c24f2b6d55033f2b66804b5778f5aa42af9ced2ee4d6ebd207f8a9087fde3366e6d9246196da70c4115ad7039c96fab2b453ca45e8007e2bf31e425f01fb6424
-  languageName: node
-  linkType: hard
-
-"@srclaunch/dx@npm:^0.1.86":
+"@srclaunch/dx@npm:^0.1.84, @srclaunch/dx@npm:^0.1.86":
   version: 0.1.86
   resolution: "@srclaunch/dx@npm:0.1.86"
   checksum: c8936121d77464ecb1dac15ef5799c1739b71b59e622a94d0ca3fe7c2804fe8995059501e1402bf318cd675d57f192e3605ce9076a1b84f2d78d81332e1d61a6
@@ -1069,7 +1062,7 @@ __metadata:
   resolution: "@srclaunch/logic@workspace:."
   dependencies:
     "@microsoft/eslint-plugin-sdl": ^0.2.0
-    "@srclaunch/cli": ^0.1.621
+    "@srclaunch/cli": 0.1.621
     "@srclaunch/dx": ^0.1.86
     "@srclaunch/types": ^0.1.292
     "@types/fs-extra": ^9.0.13

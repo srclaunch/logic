@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@microsoft/eslint-plugin-sdl": "^0.2.0",
-    "@srclaunch/cli": "^0.1.621",
+    "@srclaunch/cli": "0.1.621",
     "@srclaunch/dx": "^0.1.86",
     "@srclaunch/types": "^0.1.292",
     "@types/fs-extra": "^9.0.13",
