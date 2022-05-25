@@ -1,38 +1,41 @@
-import {
-  readFile as fsReadFile,
-  writeFile as fsWriteFile,
-  ensureFile,
-} from 'fs-extra';
-import {} from 'fs-extra';
+import fs from 'fs-extra';
 
-export const readFile = async (path?: string): Promise<string> => {
-  if (!path) {
-    throw new Error('Path must be provided');
+export const deleteFile = async (file: string): Promise<void> => {
+  if (!file) {
+    throw new Error('File must be provided');
+  }
+
+  if (file === '/') {
+    throw new Error('Cannot delete root directory');
   }
 
   try {
-    return (await fsReadFile(path)).toString();
+    await fs.remove(file);
   } catch (err) {
-    throw new Error(`Could not read file: ${path}`);
+    throw new Error(`Could not delete file: ${file}`);
   }
 };
 
-export const writeFile = async (path: string, contents?: string) => {
-  if (!path) {
-    throw new Error('File name must be provided');
+export async function readFile(filePath: string) {
+  if (!filePath) {
+    throw new Error('File path must be provided');
   }
 
-  if (contents) {
-    try {
-      await fsWriteFile(path, contents);
-    } catch (err) {
-      throw new Error(`Could not write file: ${path}`);
-    }
-  } else {
-    try {
-      await ensureFile(path);
-    } catch (err) {
-      throw new Error(`Could not create file: ${path}`);
-    }
+  try {
+    return (await fs.readFile(filePath)).toString();
+  } catch (err) {
+    throw new Error(`Could not read file: ${filePath}`);
   }
-};
+}
+
+export async function writeFile(filePath: string, data: string) {
+  if (!filePath) {
+    throw new Error('File path must be provided');
+  }
+
+  try {
+    return await fs.writeFile(filePath, data);
+  } catch (err) {
+    throw new Error(`Could not write file: ${filePath}`);
+  }
+}

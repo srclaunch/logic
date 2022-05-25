@@ -29,7 +29,8 @@ export default <Project>{
   type: ProjectType.Library,
   build: {
     bundle: {
-      exclude: ['fs-extra', 'unconfig'],
+      exclude: ['unconfig'],
+      optimize: ['fs-extra'],
     },
     formats: [BuildFormat.UMD, BuildFormat.ESM],
     library: {

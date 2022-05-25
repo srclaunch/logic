@@ -7,11 +7,17 @@ export { generateNodePackageManifest } from './codegen/config/node/package-manif
 export { generateYarnConfig } from './codegen/config/package-managers/yarn';
 export { generateSrcLaunchProjectConfig } from './codegen/config/srclaunch/project';
 export { loadSrcLaunchConfig } from './loaders/config/srclaunch/index';
-export { readFile, writeFile } from './storage/file-system/file/index';
+export {
+  deleteFile,
+  readFile,
+  writeFile,
+} from './storage/file-system/file/index';
 export { readJSONFile } from './storage/file-system/file/json';
 export { readYAMLFile } from './storage/file-system/file/yaml';
 export {
   createDirectory,
+  deleteDirectory,
+  emptyDirectory,
   ensureDirectoryExists,
 } from './storage/file-system/directory';
 export { transformObjectToCSV } from './transformers/object/csv';
