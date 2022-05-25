@@ -1,6 +1,6 @@
 export * from './actions';
 export * from './analyzers';
-export * from './collectors/conditions';
+export * from './conditions';
 export { createESModule } from './codegen/code/js/es-module';
 export { generateGitIgnoreConfig } from './codegen/config/git/gitignore';
 export { generateNodePackageManifest } from './codegen/config/node/package-manifest';
