@@ -29,7 +29,7 @@ export default <Project>{
   type: ProjectType.Library,
   build: {
     bundle: {
-      exclude: ['unconfig'],
+      exclude: ['fs-extra', 'unconfig'],
     },
     formats: [BuildFormat.UMD, BuildFormat.ESM],
     library: {
