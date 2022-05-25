@@ -16,6 +16,6 @@ export {
 } from './storage/file-system/directory';
 export { transformObjectToCSV } from './transformers/object/csv';
 export { transformObjectToYAML } from './transformers/object/yaml';
-// export * from './types';
+export * from './types';
 export { validate } from './validators';
 // export * from './workflows';
