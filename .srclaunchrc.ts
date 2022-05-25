@@ -28,7 +28,10 @@ export default <Project>{
     'Actions, parsers, generators, transformers and other programming abstractions',
   type: ProjectType.Library,
   build: {
-    formats: [BuildFormat.ESM, BuildFormat.UMD],
+    bundle: {
+      exclude: ['unconfig'],
+    },
+    formats: [BuildFormat.UMD, BuildFormat.ESM],
     library: {
       name: '@srclaunch/logic',
     },
