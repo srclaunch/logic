@@ -1,7 +1,7 @@
 import { getValidationProblemLabel } from './problem';
 import emailValidator from 'email-validator';
 import passwordValidator from 'password-validator';
-import { Condition } from '../collectors/conditions/index';
+import { Condition } from '../conditions/index';
 import { ValidationProblem } from '../types/validators/problem';
 
 export const validate = (
@@ -12,6 +12,8 @@ export const validate = (
 ): ValidationProblem[] => {
   const problems = [...Object.entries(conditions)]
     .map(([conditionName, condition]) => {
+      console.log('conditionName', conditionName);
+      console.log('condition', condition);
       const conditionValue = conditions[conditionName];
 
       switch (conditionName) {

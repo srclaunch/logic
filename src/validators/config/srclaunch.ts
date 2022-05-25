@@ -1,48 +1,41 @@
-import { Project } from "@srclaunch/types";
-import { Condition } from "../../conditions";
-import { Validator } from "../index";
-import { ValidationProblem } from "../problem";
+import { Project } from '@srclaunch/types';
+import { Condition } from '../../conditions/index';
+import { getValidationProblemLabel } from '../../validators/problem';
 
-export class SrcLaunchConfigValidator extends Validator {
-  problems = [];
-
-  constructor() {
-    super([]);
+const validateSrcLaunchConfig = (config: Project) => {
+  let problems = [];
+  if (!config) {
+    problems = [...problems, getValidationProblemLabel(Condition.IsRequired)];
   }
 
-  async validate(config: Project) {
-    if (!config) {
-      this.problems = this.problems.concat(
-        new ValidationProblem(Condition.IsRequired)
-      );
-    }
-
-    if (!config.name) {
-      this.problems = this.problems.concat(
-        new ValidationProblem(Condition.IsRequired, {
-          subject: "name",
-        })
-      );
-    }
-
-    if (!config.description) {
-      this.problems = this.problems.concat(
-        new ValidationProblem(Condition.IsRequired, {
-          subject: "name",
-        })
-      );
-    }
-
-    if (!config.type) {
-      this.problems = this.problems.concat(
-        new ValidationProblem(Condition.IsRequired, {
-          subject: "name",
-        })
-      );
-    }
-
-    // TODO: Add more checks here
-
-    return this.problems;
+  if (!config.name) {
+    problems = [
+      ...problems,
+      getValidationProblemLabel(Condition.IsRequired, {
+        subject: 'name',
+      }),
+    ];
   }
-}
+
+  if (!config.description) {
+    problems = [
+      ...problems,
+      getValidationProblemLabel(Condition.IsRequired, {
+        subject: 'name',
+      }),
+    ];
+  }
+
+  if (!config.type) {
+    problems = [
+      ...problems,
+      getValidationProblemLabel(Condition.IsRequired, {
+        subject: 'name',
+      }),
+    ];
+  }
+
+  // TODO: Add more checks here
+
+  return problems;
+};
