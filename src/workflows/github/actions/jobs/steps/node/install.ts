@@ -1,7 +1,6 @@
 import {
   GitHubActionsWorkflowStep,
   PackageManager,
-  Environment,
   EnvironmentType,
 } from '@srclaunch/types';
 import { PackageManagers } from '../../../packageManagers';
@@ -21,14 +20,14 @@ export function getNodeEnvEnvironmentVariable(
 
 export function getPackageManagerInstallCommand(
   environmentType?: EnvironmentType,
-  packageManager?: PackageManager,
+  packageManager: PackageManager = PackageManager.Yarn,
 ) {
   return PackageManagers[packageManager].commands.install({ environmentType });
 }
 
 export const installDependencies = ({
-  environmentType,
-  packageManager,
+  environmentType = EnvironmentType.CI,
+  packageManager = PackageManager.Yarn,
 }: {
   environmentType?: EnvironmentType;
   packageManager?: PackageManager;

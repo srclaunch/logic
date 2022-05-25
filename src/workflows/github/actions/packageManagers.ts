@@ -27,7 +27,12 @@ export const PackageManagers = {
         environmentType = EnvironmentType.CI,
       }: {
         environmentType?: EnvironmentType;
-      }) => `pnpm ${environmentType === EnvironmentType.CI ? 'ci' : 'install'}`,
+      }) =>
+        `pnpm ${
+          environmentType === EnvironmentType.CI
+            ? 'install --frozen-lockfile'
+            : 'install'
+        }`,
       publish: () => 'pnpm publish',
       run: (script?: string) => `pnpm ${script}`,
       test: ({
@@ -46,7 +51,12 @@ export const PackageManagers = {
         environmentType = EnvironmentType.CI,
       }: {
         environmentType?: EnvironmentType;
-      }) => `yarn ${environmentType === EnvironmentType.CI ? 'ci' : 'install'}`,
+      }) =>
+        `yarn ${
+          environmentType === EnvironmentType.CI
+            ? 'install --frozen-lockfile'
+            : 'install'
+        }`,
       publish: () => 'yarn npm publish',
       run: (script?: string) => `yarn ${script}`,
       test: ({
