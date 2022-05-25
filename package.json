@@ -3,7 +3,7 @@
   "description": "Actions, parsers, generators, transformers and other programming abstractions",
   "author": "Steven Bennett <steven@srclaunch.com>",
   "license": "MIT",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "engines": {
     "node": ">=16",
     "yarn": ">=3.2.0"
