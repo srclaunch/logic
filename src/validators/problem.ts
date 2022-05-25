@@ -1,4 +1,4 @@
-import { Condition } from '../collectors/conditions/index';
+import { Condition } from '../conditions/index';
 
 export const getValidationProblemLabel = (
   condition: Condition,

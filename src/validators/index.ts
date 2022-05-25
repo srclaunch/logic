@@ -15,7 +15,7 @@ export const validate = (
       console.log('conditionName', conditionName);
       console.log('condition', condition);
       const conditionValue = conditions[conditionName];
-
+      console.log('conditionValue', conditionValue);
       switch (conditionName) {
         case Condition.IsRequired:
           if (typeof condition?.['is-required'] !== 'boolean') {
