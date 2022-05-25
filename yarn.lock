@@ -1034,6 +1034,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@srclaunch/dx@npm:^0.1.86":
+  version: 0.1.86
+  resolution: "@srclaunch/dx@npm:0.1.86"
+  checksum: c8936121d77464ecb1dac15ef5799c1739b71b59e622a94d0ca3fe7c2804fe8995059501e1402bf318cd675d57f192e3605ce9076a1b84f2d78d81332e1d61a6
+  languageName: node
+  linkType: hard
+
 "@srclaunch/exceptions@npm:^0.1.75":
   version: 0.1.75
   resolution: "@srclaunch/exceptions@npm:0.1.75"
@@ -1063,8 +1070,8 @@ __metadata:
   dependencies:
     "@microsoft/eslint-plugin-sdl": ^0.2.0
     "@srclaunch/cli": ^0.1.621
-    "@srclaunch/dx": ^0.1.84
-    "@srclaunch/types": ^0.1.290
+    "@srclaunch/dx": ^0.1.86
+    "@srclaunch/types": ^0.1.292
     "@types/fs-extra": ^9.0.13
     "@typescript-eslint/eslint-plugin": ^5.26.0
     "@typescript-eslint/parser": ^5.26.0
@@ -1101,10 +1108,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@srclaunch/types@npm:^0.1.290":
-  version: 0.1.290
-  resolution: "@srclaunch/types@npm:0.1.290"
-  checksum: 9d1987b6596a276af17bd72ee22348a2ea3b7448f53cdb7813ac604a05f046a3fefeab4dac4a8916fc9ea93d84a4308947008d0167b73c34ce9b5a049cef25d7
+"@srclaunch/types@npm:^0.1.292":
+  version: 0.1.292
+  resolution: "@srclaunch/types@npm:0.1.292"
+  checksum: 3c23c21a9e65a1c89bb732e5f71fad94a41283c51456f0c45e8aeeb2b3d2f400f7283a08ec83973f95713abddad2a62444d8d03654710fc3c2111f8bf90d8a92
   languageName: node
   linkType: hard
 
