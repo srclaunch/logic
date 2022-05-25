@@ -1,17 +1,11 @@
 import { transformObjectToYAML } from '../../../transformers/object/yaml';
-
-export enum YarnNodeLinker {
-  PnP = 'pnp',
-  NodeModules = 'node-modules',
-}
-
-export type YarnConfigGeneratorOptions = {
-  nodeLinker?: YarnNodeLinker;
-};
+import { YarnNodeLinker } from '../../../types/codegen/config/package-manager/yarn';
 
 export async function generateYarnConfig({
   nodeLinker,
-}: YarnConfigGeneratorOptions): Promise<string> {
+}: {
+  nodeLinker?: YarnNodeLinker;
+}): Promise<string> {
   const yarnRC = {
     nodeLinker: nodeLinker ?? YarnNodeLinker.NodeModules,
   };
