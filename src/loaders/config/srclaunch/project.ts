@@ -1,7 +1,7 @@
 import { loadConfig } from 'unconfig';
 import { SrcLaunchConfig } from '@srclaunch/types';
-import { SRCLAUNCH_CONFIG_FILE_NAMES } from '../../constants/config/srclaunch';
-import { readYAMLFile } from '../../storage/file-system/file/yaml';
+import { SRCLAUNCH_CONFIG_FILE_NAMES } from '../../../constants/config/srclaunch';
+import { readYAMLFile } from '../../../storage/file-system/file/yaml';
 
 export const loadSrcLaunchConfig = async (): Promise<SrcLaunchConfig> => {
   const { config, sources } = await loadConfig<SrcLaunchConfig>({
