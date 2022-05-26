@@ -28,17 +28,16 @@ export default <Project>{
     'Actions, parsers, generators, transformers and other programming abstractions',
   type: ProjectType.Library,
   build: {
-    formats: [BuildFormat.UMD, BuildFormat.ESM],
+    bundle: {
+      exclude: ['fs-extra'],
+    },
+    formats: [BuildFormat.IIFE, BuildFormat.ESM],
     library: {
       name: '@srclaunch/logic',
     },
-    output: {
-      directory: 'dist',
-      file: 'index',
-    },
-    platform: BuildPlatform.Universal,
+    platform: BuildPlatform.Node,
     target: BuildTarget.ESNext,
-    tool: BuildTool.Vite,
+    tool: BuildTool.ESBuild,
   },
   environments: {
     development: {
