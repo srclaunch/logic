@@ -29,15 +29,15 @@ export default <Project>{
   type: ProjectType.Library,
   build: {
     bundle: {
-      exclude: ['fs-extra'],
+      exclude: ['fs-extra', 'unconfig'],
     },
-    formats: [BuildFormat.IIFE, BuildFormat.ESM],
+    formats: [BuildFormat.UMD, BuildFormat.ESM],
     library: {
       name: '@srclaunch/logic',
     },
     platform: BuildPlatform.Node,
     target: BuildTarget.ESNext,
-    tool: BuildTool.ESBuild,
+    tool: BuildTool.Vite,
   },
   environments: {
     development: {
